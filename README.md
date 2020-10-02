@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://upset.dev">
-    <img src="https://avatar.statically.workers.dev/A?rounded=true" alt="Avatar" height="60"/>
+    <img src="https://avatar.frans.workers.dev/A?rounded=true" alt="Avatar" height="60"/>
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 
 ## :zap: API
 
-`https://avatar.statically.workers.dev/:text`
+`https://avatar.frans.workers.dev/:text`
 
 - `?s=` change avatar size
 - `?rounded=true` change shape to be round
