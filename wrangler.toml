@@ -1,0 +1,5 @@
+name = "avatar"
+type = "javascript"
+account_id = ""
+zone_id = ""
+route = "avatar.example.com/*"
