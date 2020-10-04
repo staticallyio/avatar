@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://upset.dev">
-    <img src="https://cdn.statically.io/avatar/shape=rounded/A" alt="Avatar" height="60"/>
+    <img src="https://cdn.statically.io/avatar/shape=circle/A" alt="Avatar" height="60"/>
   </a>
 </p>
 
@@ -19,4 +19,5 @@
 `https://avatar.statically.workers.dev/avatar/:text`
 
 - `?s=` change avatar size
-- `?shape=rounded` change shape to be round
+- `?shape=circle` use circle shape
+- `?shape=rounded` use rounded shape

@@ -10,10 +10,11 @@ async function handleRequest(request) {
     let color2 = await getRandomColor();
 
     if (url.searchParams.has('s')) size = url.searchParams.get('s');
-    if (url.searchParams.get('shape') == 'rounded')
+    if (url.searchParams.get('shape') == 'circle')
         radius = `style="border-radius: 50%;"`;
-    if (path.startsWith(BASEPATH))
-        text = avatarText.substr(0, 2);
+    if (url.searchParams.get('shape') == 'rounded')
+        radius = `style="border-radius: 10px;"`;
+    if (path.startsWith(BASEPATH)) text = avatarText.substr(0, 2);
 
     let fontsize = (size * 0.9) / text.length;
     const avatar = `<?xml version="1.0" standalone="no"?>
