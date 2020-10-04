@@ -9,9 +9,11 @@ async function handleRequest(request) {
     let color2 = await getRandomColor();
 
     if (url.searchParams.has('s')) size = url.searchParams.get('s');
-    if (url.searchParams.get('rounded') == "true") radius = `style="border-radius: 50%;"`;
+    if (url.searchParams.get('rounded') == 'true')
+        radius = `style="border-radius: 50%;"`;
     if (path !== '/') text = path.slice(1).substr(0, 2);
 
+    let fontsize = (size * 0.9) / text.length;
     const avatar = `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg ${radius} width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +25,7 @@ async function handleRequest(request) {
       </linearGradient>
     </defs>
     <rect fill="url(#avatar)" x="0" y="0" width="${size}" height="${size}"/>
-    <text x="50%" y="50%" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="${(size * 0.9) / text.length}">${text}</text>
+    <text x="50%" y="50%" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="${fontsize}">${text}</text>
   </g>
 </svg>
 `;
@@ -35,7 +37,10 @@ async function handleRequest(request) {
         response.headers.set('Cache-Control', 'no-cache');
     } else {
         // Set cache for 1 year
-        response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+        response.headers.set(
+            'Cache-Control',
+            'public, max-age=31536000, immutable',
+        );
     }
 
     response.headers.set('Content-Type', 'image/svg+xml; charset=utf8');
@@ -44,12 +49,12 @@ async function handleRequest(request) {
 }
 
 async function getRandomColor() {
-  var letters = '0123456789abcdef';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+    var letters = '0123456789abcdef';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 
 addEventListener('fetch', event => {
