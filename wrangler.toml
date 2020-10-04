@@ -2,4 +2,7 @@ name = "avatar"
 type = "javascript"
 account_id = ""
 zone_id = ""
-route = "avatar.example.com/*"
+route = "avatar.example.com/avatar/*"
+vars = {
+    BASEPATH = "/avatar/"
+  }

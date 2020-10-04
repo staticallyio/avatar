@@ -1,6 +1,7 @@
 async function handleRequest(request) {
     const url = new URL(request.url);
     const path = url.pathname;
+    const avatarText = path.replace(BASEPATH, '');
 
     let size = '60';
     let text = 'A';
@@ -9,9 +10,10 @@ async function handleRequest(request) {
     let color2 = await getRandomColor();
 
     if (url.searchParams.has('s')) size = url.searchParams.get('s');
-    if (url.searchParams.get('rounded') == 'true')
+    if (url.searchParams.get('shape') == 'rounded')
         radius = `style="border-radius: 50%;"`;
-    if (path !== '/') text = path.slice(1).substr(0, 2);
+    if (path.startsWith(BASEPATH))
+        text = avatarText.substr(0, 2);
 
     let fontsize = (size * 0.9) / text.length;
     const avatar = `<?xml version="1.0" standalone="no"?>

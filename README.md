@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://upset.dev">
-    <img src="https://avatar.frans.workers.dev/A?rounded=true" alt="Avatar" height="60"/>
+    <img src="https://cdn.statically.io/avatar/shape=rounded/A" alt="Avatar" height="60"/>
   </a>
 </p>
 
@@ -9,14 +9,14 @@
 <p align="center">A simple and beautiful avatar service on Cloudflare Workers.</p>
 
 <p align="center">
-  <a href="https://upset.dev">upset.dev</a> |
+  <a href="https://statically.io">statically.io</a> |
   <a href="https://twitter.com/fransallen">Twitter</a> |
   <a href="https://www.patreon.com/fransallen">Donate</a>
 </p>
 
 ## :zap: API
 
-`https://avatar.frans.workers.dev/:text`
+`https://avatar.statically.workers.dev/avatar/:text`
 
 - `?s=` change avatar size
-- `?rounded=true` change shape to be round
+- `?shape=rounded` change shape to be round
