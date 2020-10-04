@@ -6,7 +6,7 @@
 
 <h1 align="center">Avatar</h1>
 
-<p align="center">A simple and beautiful avatar service on Cloudflare Workers.</p>
+<p align="center">A simple, beautiful, and high-quality avatar service on Cloudflare Workers.</p>
 
 <p align="center">
   <a href="https://statically.io">statically.io</a> |
