@@ -1,16 +1,16 @@
 {
-    "private": true,
-    "name": "avatar",
-    "version": "1.0.0",
-    "description": "A simple and beautiful avatar service on Cloudflare Workers.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write '**/{index,package}.{js,json}'"
-    },
-    "author": "Frans Allen",
-    "license": "MIT",
-    "devDependencies": {
-        "prettier": "^1.18.2"
-    }
+  "private": true,
+  "name": "avatar",
+  "version": "1.0.0",
+  "description": "A simple and beautiful avatar service on Cloudflare Workers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/{index,package}.{js,json}'"
+  },
+  "author": "Frans Allen",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
 }
