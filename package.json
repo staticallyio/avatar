@@ -5,12 +5,14 @@
   "description": "A simple and beautiful avatar service on Cloudflare Workers.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,json,css}'"
+    "dev": "wrangler dev"
   },
-  "author": "Frans Allen",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "miniflare": "^4.20251217.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "wrangler": "4"
   }
 }

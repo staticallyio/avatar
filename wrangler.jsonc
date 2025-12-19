@@ -1,0 +1,16 @@
+{
+  "name": "avatar",
+  // "account_id": "YOUR_ACCOUNT_ID",
+
+  "main": "index.js",
+  "routes": [
+    {
+      "pattern": "avatar.example.com/avatar/*",
+      "zone_name": "example.com"
+    }
+  ],
+
+  "vars": {
+    "BASEPATH": "/avatar/"
+  }
+}
